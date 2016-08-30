@@ -83,11 +83,37 @@ a {
       text-decoration: none; }
 
 .card {
-  background-color: #FFF;
+  background-color: #FBFBFB;
   text-transform: uppercase; }
-  .card .title {
-    padding: 10px 20px;
-    font-weight: bold;
-    border-bottom: 1px solid #EEE; }
+  .card .card-block {
+    padding: 0; }
+  .card .card-header {
+    background-color: #FBFBFB;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.125); }
+  .card .card-title {
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 1rem;
+    margin-bottom: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.125); }
+    .card .card-title span {
+      display: block;
+      font-size: 1rem;
+      font-weight: normal; }
+  .card .footer-card-item {
+    border-right: 2px solid rgba(0, 0, 0, 0.125);
+    padding: 0.5rem; }
+    .card .footer-card-item .card-text {
+      text-align: center; }
+      .card .footer-card-item .card-text h4 span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal; }
+    .card .footer-card-item:last-child {
+      border-right: none; }
+  .card .card-footer {
+    text-align: center;
+    cursor: pointer;
+    background-color: #BFBFBF; }
 
 /*# sourceMappingURL=style.css.map */

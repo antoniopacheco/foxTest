@@ -1,19 +1,36 @@
-var getEmployeesbyGet = function(){
+function buildHtmlTable(employees) {
+    for (var i = 0 ; i < employees.length ; i++) {
+    	var row$ = $('<tr/>');
+    	row$.append($('<td/>').html(employees[i].id));
+    	row$.append($('<td/>').html(employees[i].firstName));
+    	row$.append($('<td/>').html(employees[i].lastName));
+    	row$.append($('<td/>').html(employees[i].sex));
+    	row$.append($('<td/>').html(employees[i].department));
+    	$('#employeesContent').append(row$);
+     }
+}
 
+function getEmployeesbyGet(){
 	 $.ajax({
         type: "post",
-        url: "https://www.foxnotes.com/sfiles/restsamples.nsf/employees?readform",
+        url: "getFile.php",
         dataType:"json",
         success: function (response) {
-        	console.log(response);
-            // if(response.status === "success") {
-            //     console.log();
-            // } else if(response.status === "error") {
-            //     // do something with response.message or whatever other data on error
-            // }
+        	buildHtmlTable(response);
         },
-        error: function(response){
-        	console.log(response);
+        error: function(xhr){
+        	//check status request to show custom error, may be we can choise what to do in any case.
+        	switch(xhr.status){
+        		case 400 : console.log('Bad request');
+        		break;
+        		case 403 : console.log('Forbidden');
+        		break;
+        		case 404 : console.log("page not found");
+        		break;
+        		case 500: console.log("server error");
+        		break;
+        	}
+
         }
     })
 }
@@ -34,5 +51,5 @@ var getEmployeesbyJsonP = function(){
 }
 $(function() {
 	getEmployeesbyGet();
-	getEmployeesbyJsonP();
+	//getEmployeesbyJsonP();
 });

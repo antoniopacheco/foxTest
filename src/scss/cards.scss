@@ -1,9 +1,49 @@
 .card{
-	background-color : #FFF;
+	background-color: #FBFBFB;
 	text-transform: uppercase;
-	.title{
-		padding: 10px 20px;
-		font-weight: bold;
-		border-bottom: 1px solid #EEE;
+	.card-block{
+		padding: 0;
+	}
+	.card-header{
+		background-color: #FBFBFB;
+		border-bottom: 2px solid rgba(0,0,0,.125);
+	}
+
+	.card-title{
+		text-align: center;
+		font-size: 3.5rem;
+		padding: 1rem;
+		margin-bottom: 0;
+		span{
+			display: block;
+			font-size: 1rem;
+			font-weight: normal;
+		}
+		border-bottom: 2px solid rgba(0,0,0,.125);	
+	}
+
+	.footer-card-item{
+		border-right: 2px solid rgba(0,0,0,.125);
+		padding: 0.5rem;
+		.card-text{
+			text-align: center;
+			h4{
+				span{
+					display: block;
+					font-size: 1rem;
+			font-weight: normal;
+				}
+			}
+
+		}
+		&:last-child{
+			border-right: none;
+		}
+	}
+
+	.card-footer{
+		text-align: center;
+		cursor: pointer;
+		background-color: #BFBFBF;
 	}
 }
