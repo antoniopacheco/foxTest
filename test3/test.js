@@ -1,30 +1,22 @@
+var getEmployees = function(){
+	return(
+		$.ajax({
+		    url: 'https://www.foxnotes.com/sfiles/restsamples.nsf/employees?readform',
+		    type: 'GET',
+		    crossDomain: true,
+		    success: function(data){ 
+		        console.log(data);
+		    },
+		    error: function(x,y,z) {
+		        
+		    }
+		})
+	);
+}
+
 $(function() {
-    $.ajax({
-    url: 'https://www.foxnotes.com/sfiles/restsamples.nsf/employees?readform',
-    type: 'GET',
-    dataType: 'jsonp',
-    jsonp: 'callback',
-    jsonpCallback: 'jsonpCallback',
-    crossDomain: true,
-        async: false,
-
-    success: function(data){ 
-        console.log(data);
-    },
-    error: function(x,y,z) {
-        console.log(x);
-                console.log(y);
-
-        console.log(z);
-
-    }
+	var employes = getEmployees();
+	$.when( employes} ).done(function( x ) {
+ 		 alert( x.testing ); // Alerts "123"
 });
 });
-
-window.callback = function(data){
-	console.log(callback);
-}
-
-function jsonpCallback(xy){
-	console.log('jsonpcl')
-}
