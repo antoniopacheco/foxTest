@@ -29,6 +29,9 @@ a {
 .row {
   margin: 0; }
 
+.dataTables_filter {
+  display: none; }
+
 .main-header {
   background-color: #FFF;
   position: relative;
@@ -115,5 +118,73 @@ a {
     text-align: center;
     cursor: pointer;
     background-color: #BFBFBF; }
+
+.tableHeader {
+  background-color: #9a9a9a;
+  height: 45px;
+  position: relative;
+  padding: 10px; }
+  .tableHeader h4 {
+    color: #FFF;
+    float: left;
+    margin-left: 20px;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%); }
+  .tableHeader .controls {
+    height: 100%; }
+  .tableHeader .search {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    border: 1px solid #E3E3E3;
+    border-radius: 5px;
+    margin-right: 10px;
+    color: #FFF;
+    display: block;
+    float: left; }
+  .tableHeader .search-input {
+    background-color: transparent;
+    border: none;
+    -webkit-appearance: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    color: #FFF;
+    outline: none; }
+  .tableHeader ::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: #FFF; }
+  .tableHeader :-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #FFF;
+    opacity: 1; }
+  .tableHeader ::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #FFF;
+    opacity: 1; }
+  .tableHeader :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #FFF; }
+  .tableHeader .btn-control {
+    padding: 3px;
+    background-color: transparent;
+    border: 1px solid #E3E3E3;
+    color: #FFF;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%); }
+  .tableHeader .btn-full {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-color: transparent;
+    border: none;
+    color: #FFF;
+    display: block;
+    float: right;
+    font-size: 2em; }
 
 /*# sourceMappingURL=style.css.map */
